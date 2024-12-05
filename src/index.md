@@ -1,11 +1,13 @@
 ---
-title: Smol 11ty Starter
+title: Smol 11ty Starter (updated)
 layout: page.njk
 ---
 
 ## {{ meta.siteDescription }}
 
 Created by Stephanie Eckles - [@5t3ph](https://twitter.com/5t3ph) - author of [11ty.Rocks](https://11ty.rocks), [ModernCSS.dev](https://moderncss.dev), and [SmolCSS.dev](https://smolcss.dev).
+
+Updated by [king-oldmate](https://github.com/king-oldmate) for his ease of use. Primarily, it has been updated to 11ty v3, though some other changes have been made. 
 
 ### Quick Start
 
