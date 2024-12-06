@@ -7,7 +7,11 @@
   <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
-<body>
+{% if page.url === '/' %}
+<body class="page-home">
+{% else %}
+<body class="page-{{ page.fileSlug }}">
+{% endif %}
   {% include "nav.njk" %}
 
   {{ content | safe }}
@@ -17,6 +21,6 @@
       <p>&copy; {% year %} {{ meta.siteName }}{% if meta.authorName %} • {{ meta.authorName }}{% endif %}</p>
     </div>
   </footer>
-
+  <script src="{{ '/js/main.js' | url }}"></script>
 </body>
 </html>
