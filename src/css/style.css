@@ -1,3 +1,21 @@
+:root {
+  --primary-text-color: light-dark(#222, #FFE);
+  --secondary-text-color: light-dark(#757474, #9c9c9c);
+  --border-color: light-dark(#75747444, #9c9c9c3d);
+  --link-color: #33adff;
+  --border-radius: 3px;
+  --scheme-switch-color: light-dark(#33adff, #ffc933);
+  color-scheme: light dark;
+}
+
+html.dark-mode {
+  color-scheme: dark;
+}
+
+html.light-mode {
+  color-scheme: light;
+}
+
 /* Very Smol Reset */
 * {
   box-sizing: border-box;
@@ -13,7 +31,7 @@ body {
   padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-  color: #222;
+  color: var(--primary-text-color);
 }
 
 body > * {
@@ -53,10 +71,10 @@ body > footer {
 }
 
 body > footer div {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border-color);
   padding-top: 0.5em;
   font-size: 0.9rem;
-  color: #767676;
+  color: var(--secondary-text-color);
 }
 
 article * + * {
@@ -77,13 +95,13 @@ article * + * {
 }
 
 a {
-  color: navy;
-  text-underline-offset: 0.08em;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
-a:focus {
-  outline: 1px solid currentColor;
-  outline-offset: 0.2em;
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
 }
 
 /* Media */
@@ -109,7 +127,7 @@ article img {
 code:not([class*="language"]) {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   font-size: 1.75ex;
-  color: #444;
+  color: var(--secondary-text-color);
   background-color: rgba(0, 0, 0, 0.1);
   padding-right: 0.15em;
   padding-left: 0.15em;
@@ -118,7 +136,7 @@ code:not([class*="language"]) {
 blockquote {
   margin: 2rem 0;
   padding: 0.5em 1rem;
-  border-left: 3px solid rgba(0, 0, 0, 0.35);
+  border-left: 3px solid var(--border-color);
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 0 0.25rem 0.25rem 0;
 }
